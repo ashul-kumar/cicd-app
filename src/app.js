@@ -5,12 +5,13 @@ app.use(express.static("public"));
 
 
 app.get("/test", (_req, res) => {
+  res.status(200).send("Hello world");
     
 })
 
 app.get("/", (req, res) => {
     
-    res.sendFile(path.join(__dirname,  "index.html"));
+    res.sendFile(path.join(__dirname, "public" , "index.html"));
     //res.status(200).send("Hello world");
   });
   
