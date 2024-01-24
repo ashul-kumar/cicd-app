@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-ashul
+    runs-on: ashul-VM
     strategy:
       matrix:
         node-version: [18.16.1]  # You might need to adjust the Node.js version
