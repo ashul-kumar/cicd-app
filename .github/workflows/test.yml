@@ -29,7 +29,8 @@ jobs:
         run: ls
       - name: Run tests
         run: npm test -- --detectOpenHandles
-        
+      - name: delete the error pm2 
+        run: pm2 list | grep errored | awk '{print $2}' | xargs -I {} pm2 delete {}
       - name: Install PM2
         run: npm install -g pm2
 
